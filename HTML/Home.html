@@ -5,95 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Site</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 60px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="card-header bg-dark text-white">
-            <h2  style="padding: 20px;"><a class="text-white" href="">Shopping Site</a>
-            <i class='bx bxs-shopping-bag'></i>
-            <i class="bx bxs-cart-add" style="float: right;"></i>
-            </h2>
-        </div>
-  
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Shopping Site <i class='bx bxs-shopping-bag'></i></a>
+                <i class="bx bxs-cart-add text-white"></i>
+            </div>
+        </nav>
     </header>
-    <section style="padding: 20px;">
-        <h3>Smartphone Shopping</h3>
-        <br>
+
+    <section class="container py-4">
+        <h3 class="mb-4">Smartphone Shopping</h3>
+        
         <div class="row">
-            <div class="col-md-3" style="border: 1px solid black">
-                <img src="../Images/iphone14proshs.jpg" alt="" width="300px " height="350px">
-                <h4>iPhone 14 Pro</h4>
-                <span>$1200</span>
-                <button>Add to cart</button>
-                <br>
-
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="../Images/iphone14proshs.jpg" class="card-img-top" alt="iPhone 14 Pro" width="300" height="350">
+                    <div class="card-body">
+                        <h4 class="card-title">iPhone 14 Pro</h4>
+                        <span class="card-text">$1200</span>
+                        <button class="btn btn-primary">Add to cart</button>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-3"style="border: 1px solid black;">
-                <img src="../Images/iphone13.jpg" alt="" width="300px " height="350px">
-                <h4>iPhone 13</h4>
-                <span>$900</span>
-                <button>Add to cart</button>
-                <br>
-
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="../Images/iphone13.jpg" class="card-img-top" alt="iPhone 13" width="300" height="350">
+                    <div class="card-body">
+                        <h4 class="card-title">iPhone 13</h4>
+                        <span class="card-text">$900</span>
+                        <button class="btn btn-primary">Add to cart</button>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-3"style="border: 1px solid black;">
-                <img src="../Images/gtneo3t.jpg" alt="" width="300px " height="350px">
-                <h4>Realme Gt Neo 3t</h4>
-                <span>$400</span>
-                <button>Add to cart</button>
-                <br>
-
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="../Images/gtneo3t.jpg" class="card-img-top" alt="Realme Gt Neo 3t" width="300" height="350">
+                    <div class="card-body">
+                        <h4 class="card-title">Realme Gt Neo 3t</h4>
+                        <span class="card-text">$400</span>
+                        <button class="btn btn-primary">Add to cart</button>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-3"style="border: 1px solid black;">
-                <img src="../Images/1plus11.jpg" alt="" width="300px " height="350px">
-                <h4>Oneplus 11</h4>
-                <span>$600</span>
-                <button>Add to cart</button>
-                <br>
-                <br>
-
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="../Images/1plus11.jpg" class="card-img-top" alt="Oneplus 11" width="300" height="350">
+                    <div class="card-body">
+                        <h4 class="card-title">Oneplus 11</h4>
+                        <span class="card-text">$600</span>
+                        <button class="btn btn-primary">Add to cart</button>
+                    </div>
+                </div>
             </div>
         </div>
+        
         <div class="row">
-            <div class="col-md-3"style="border: 1px solid black;">
-                <img src="../Images/s22.jpg" alt="" width="300px " height="350px">
-                <h4>Samsung s22</h4>
-                <span>$700</span>
-                <button>Add to cart</button>
-                <br>
-
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="../Images/s22.jpg" class="card-img-top" alt="Samsung s22" width="300" height="350">
+                    <div class="card-body">
+                        <h4 class="card-title">Samsung s22</h4>
+                        <span class="card-text">$700</span>
+                        <button class="btn btn-primary">Add to cart</button>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-3"style="border: 1px solid black;">
-                <img src="../Images/flip3.jpg" alt="" width="300px " height="350px">
-                <h4>Samsung Flip 3</h4>
-                <span>$800</span>
-                <button>Add to cart</button>
-                <br>
-
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="../Images/flip3.jpg" class="card-img-top" alt="Samsung Flip 3" width="300" height="350">
+                    <div class="card-body">
+                        <h4 class="card-title">Samsung Flip 3</h4>
+                        <span class="card-text">$800</span>
+                        <button class="btn btn-primary">Add to cart</button>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-3"style="border: 1px solid black;">
-                <img src="../Images/v27.jpeg" alt="" width="300px " height="350px">
-                <h4>Vivo v27</h4>
-                <span>$500</span>
-                <button>Add to cart</button>
-                <br>
-
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="../Images/v27.jpeg" class="card-img-top" alt="Vivo v27" width="300" height="350">
+                    <div class="card-body">
+                        <h4 class="card-title">Vivo v27</h4>
+                        <span class="card-text">$500</span>
+                        <button class="btn btn-primary">Add to cart</button>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-3"style="border: 1px solid black;">
-                <img src="../Images/nordce3.jpg" alt="" width="300px " height="350px">
-                <h4>Oneplus nord</h4>
-                <span>$200</span>
-                <button>Add to cart</button>
-                <br>
-                <br>
-
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="../Images/nordce3.jpg" class="card-img-top" alt="Oneplus nord" width="300" height="350">
+                    <div class="card-body">
+                        <h4 class="card-title">Oneplus nord</h4>
+                        <span class="card-text">$200</span>
+                        <button class="btn btn-primary">Add to cart</button>
+                    </div>
+                </div>
             </div>
-
         </div>
-
     </section>
-    <script src="../JS/bootstrap.bundle.min.js"></script>
-    <!-- Shreyas H S -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
