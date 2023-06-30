@@ -10,14 +10,27 @@
         body {
             padding-top: 60px;
         }
+        .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
     </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-dark bg-dark fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="#">Shopping Site <i class='bx bxs-shopping-bag'></i></a>
-                <i class="bx bxs-cart-add text-white" style="font-size: 23px;"></i>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bx bxs-cart-add text-white" style="font-size: 23px;"></i></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
@@ -26,94 +39,108 @@
         <h3 class="mb-4">Smartphone Shopping</h3>
         
         <div class="row">
-            <div class="col-md-3 mb-4">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                 <div class="card">
-                    <img src="../Images/iphone14proshs.jpg" class="card-img-top" alt="iPhone 14 Pro" width="300" height="350">
+                    <img src="../Images/iphone14proshs.jpg" class="card-img-top" alt="iPhone 14 Pro" width="300" height="320">
                     <div class="card-body">
                         <h4 class="card-title">iPhone 14 Pro</h4>
                         <span class="card-text">$1200</span>
-                        <button class="btn-sm btn-primary" >Add to cart</button>
-                        <button class="btn-sm btn-danger">Remove</button>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" >Add to cart</button>
+                            <button class="btn btn-danger">Remove</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 mb-4">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                 <div class="card">
-                    <img src="../Images/iphone13.jpg" class="card-img-top" alt="iPhone 13" width="300" height="350">
+                    <img src="../Images/iphone13.jpg" class="card-img-top" alt="iPhone 13" width="300" height="320">
                     <div class="card-body">
                         <h4 class="card-title">iPhone 13</h4>
                         <span class="card-text">$900</span>
-                        <button class="btn-sm btn-primary" >Add to cart</button>
-                        <button class="btn-sm btn-danger">Remove</button>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" >Add to cart</button>
+                            <button class="btn btn-danger">Remove</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 mb-4">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                 <div class="card">
-                    <img src="../Images/gtneo3t.jpg" class="card-img-top" alt="Realme Gt Neo 3t" width="300" height="350">
+                    <img src="../Images/gtneo3t.jpg" class="card-img-top" alt="Realme Gt Neo 3t" width="300" height="320">
                     <div class="card-body">
                         <h4 class="card-title">Realme Gt Neo 3t</h4>
                         <span class="card-text">$300</span>
-                        <button class="btn-sm btn-primary" >Add to cart</button>
-                        <button class="btn-sm btn-danger">Remove</button>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" >Add to cart</button>
+                            <button class="btn btn-danger">Remove</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 mb-4">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                 <div class="card">
-                    <img src="../Images/1plus11.jpg" class="card-img-top" alt="Oneplus 11" width="300" height="350">
+                    <img src="../Images/1plus11.jpg" class="card-img-top" alt="Oneplus 11" width="300" height="320">
                     <div class="card-body">
                         <h4 class="card-title">Oneplus 11</h4>
                         <span class="card-text">$600</span>
-                        <button class="btn-sm btn-primary" >Add to cart</button>
-                        <button class="btn-sm btn-danger">Remove</button>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" >Add to cart</button>
+                            <button class="btn btn-danger">Remove</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-3 mb-4">
+
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                 <div class="card">
-                    <img src="../Images/s22.jpg" class="card-img-top" alt="Samsung s22" width="300" height="350">
+                    <img src="../Images/s22.jpg" class="card-img-top" alt="Samsung s22" width="300" height="320">
                     <div class="card-body">
                         <h4 class="card-title">Samsung s22</h4>
                         <span class="card-text">$700</span>
-                        <button class="btn-sm btn-primary" >Add to cart</button>
-                        <button class="btn-sm btn-danger">Remove</button>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" >Add to cart</button>
+                            <button class="btn btn-danger">Remove</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 mb-4">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                 <div class="card">
-                    <img src="../Images/flip3.jpg" class="card-img-top" alt="Samsung Flip 3" width="300" height="350">
+                    <img src="../Images/flip3.jpg" class="card-img-top" alt="Samsung Flip 3" width="300" height="320">
                     <div class="card-body">
                         <h4 class="card-title">Samsung Flip 3</h4>
                         <span class="card-text">$800</span>
-                        <button class="btn-sm btn-primary" >Add to cart</button>
-                        <button class="btn-sm btn-danger">Remove</button>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" >Add to cart</button>
+                            <button class="btn btn-danger">Remove</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 mb-4">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                 <div class="card">
-                    <img src="../Images/v27.jpeg" class="card-img-top" alt="Vivo v27" width="300" height="350">
+                    <img src="../Images/v27.jpeg" class="card-img-top" alt="Vivo v27" width="300" height="320">
                     <div class="card-body">
                         <h4 class="card-title">Vivo v27</h4>
                         <span class="card-text">$500</span>
-                        <button class="btn-sm btn-primary" >Add to cart</button>
-                        <button class="btn-sm btn-danger">Remove</button>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" >Add to cart</button>
+                            <button class="btn btn-danger">Remove</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 mb-4">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                 <div class="card">
-                    <img src="../Images/nordce3.jpg" class="card-img-top" alt="Oneplus nord" width="300" height="350">
+                    <img src="../Images/nordce3.jpg" class="card-img-top" alt="Oneplus nord" width="300" height="320">
                     <div class="card-body">
                         <h4 class="card-title">Oneplus nord</h4>
                         <span class="card-text">$200</span>
-                        <button class="btn-sm btn-primary" >Add to cart</button>
-                        <button class="btn-sm btn-danger">Remove</button>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" >Add to cart</button>
+                            <button class="btn btn-danger">Remove</button>
+                        </div>
                     </div>
                 </div>
             </div>
