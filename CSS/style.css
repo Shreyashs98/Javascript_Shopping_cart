@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;1,500&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: ghostwhite;
+    padding-top: 60px;
+}
+
+.card-img-top {
+    height: 320px; 
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.navbar {
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar-toggler {
+    color: white;
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28156, 163, 175, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-size: 23px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+.btn-primary {
+    font-size: 1rem;
+}
+
+.btn-danger {
+    font-size: 1rem;
+}
