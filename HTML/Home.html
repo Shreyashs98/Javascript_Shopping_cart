@@ -12,14 +12,14 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-secondary fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="Home.html"><h3>Shopping Site <i class='bx bxs-shopping-bag'></i></h3> </a>
+                <a class="navbar-brand" href="home.html"><h3>Shopping Site <i class='bx bxs-shopping-bag'></i></h3> </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="cart.html"><i class="bx bxs-cart-add text-white"></i></a>
+                            <a class="nav-link text-white" href="cart.html"><i class="bx bxs-cart-add "></i><span id="cart-count"></span></a>
                         </li>
                     </ul>
                 </div>
@@ -30,114 +30,13 @@
     <section class="container py-4">
         <h4 class="mb-4">Smartphone Shopping</h4>
         
-        <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="../Images/iphone14proshs.jpg" class="card-img-top" alt="iPhone 14 Pro">
-                    <div class="card-body">
-                        <h4 class="card-title">iPhone 14 Pro</h4>
-                        <span class="card-text">$1200</span>
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-primary">Add to cart</button>
-                            <button class="btn btn-danger">Remove</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="../Images/iphone13.jpg" class="card-img-top" alt="iPhone 13">
-                    <div class="card-body">
-                        <h4 class="card-title">iPhone 13</h4>
-                        <span class="card-text">$900</span>
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-primary">Add to cart</button>
-                            <button class="btn btn-danger">Remove</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="../Images/gtneo3t.jpg" class="card-img-top" alt="Realme Gt Neo 3t">
-                    <div class="card-body">
-                        <h4 class="card-title">Realme Gt Neo 3t</h4>
-                        <span class="card-text">$300</span>
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-primary">Add to cart</button>
-                            <button class="btn btn-danger">Remove</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="../Images/1plus11.jpg" class="card-img-top" alt="Oneplus 11">
-                    <div class="card-body">
-                        <h4 class="card-title">Oneplus 11</h4>
-                        <span class="card-text">$600</span>
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-primary">Add to cart</button>
-                            <button class="btn btn-danger">Remove</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="../Images/s22.jpg" class="card-img-top" alt="Samsung s22">
-                    <div class="card-body">
-                        <h4 class="card-title">Samsung s22</h4>
-                        <span class="card-text">$700</span>
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-primary">Add to cart</button>
-                            <button class="btn btn-danger">Remove</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="../Images/flip3.jpg" class="card-img-top" alt="Samsung Flip 3">
-                    <div class="card-body">
-                        <h4 class="card-title">Samsung Flip 3</h4>
-                        <span class="card-text">$800</span>
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-primary">Add to cart</button>
-                            <button class="btn btn-danger">Remove</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="../Images/v27.jpeg" class="card-img-top" alt="Vivo v27">
-                    <div class="card-body">
-                        <h4 class="card-title">Vivo v27</h4>
-                        <span class="card-text">$500</span>
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-primary">Add to cart</button>
-                            <button class="btn btn-danger">Remove</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="../Images/nordce3.jpg" class="card-img-top" alt="Oneplus nord">
-                    <div class="card-body">
-                        <h4 class="card-title">Oneplus nord</h4>
-                        <span class="card-text">$200</span>
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-primary">Add to cart</button>
-                            <button class="btn btn-danger">Remove</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="row" id="product-list">
+            <!-- Product cards(shs) -->
         </div>
     </section>
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../JS/Script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

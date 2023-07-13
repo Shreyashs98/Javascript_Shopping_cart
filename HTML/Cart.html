@@ -9,17 +9,18 @@
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
+    
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-secondary fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="Home.html"><h3>Shopping Site <i class='bx bxs-shopping-bag'></i></h3> </a>
+                <a class="navbar-brand" href="home.html"><h3>Shopping Site <i class='bx bxs-shopping-bag'></i></h3></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="Home.html"><i class="bx bxs-home text-white"></i></a>
+                            <a class="nav-link" href="home.html"><i class="bx bxs-home text-white"></i> Home</a>
                         </li>
                     </ul>
                 </div>
@@ -27,13 +28,42 @@
         </nav>
     </header>
     
+    
 
     <section class="container py-4">
         <h4 class="mb-4">Cart</h4>
 
         <div id="cart-items"></div>
+        
+        <div class="mt-4 text-end">
+            <h5>Total Price: <span id="total-price">$0.00</span></h5>
+            <button class="btn btn-primary mt-3">Checkout</button>
+        </div>
     </section>
+    
+    <script src="../JS/script.js"></script>
+    <script>
+        // Function to retrieve cart items from localStorage(shs)
+        function retrieveCartItems() {
+          const storedCartItems = localStorage.getItem("cartItems");
+          if (storedCartItems) {
+            cartItems = JSON.parse(storedCartItems);
+          }
+        }
+      
+        // Function to render cart items on page load(shs)
+        function renderCartItemsOnLoad() {
+          retrieveCartItems();
+          renderCartItems();
+          updateTotalPrice();
+          updateCartCount();
+        }
+      
+        // Call the necessary functions to initialize the page(shs)
+        renderCartItemsOnLoad();
+      </script>
+      
 
-    <script src="cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
