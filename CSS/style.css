@@ -1,83 +1,137 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Permanent+Marker&family=Poppins:ital,wght@0,200;0,500;1,500&display=swap');
 
 h3 {
-    font-family: 'Mochiy Pop One', sans-serif;
+  font-family: 'Mochiy Pop One', sans-serif;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: ghostwhite;
-    padding-top: 60px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f1f3f6; 
+  padding-top: 60px;
 }
 
 .card-img-top {
-    height: 320px; 
+  height: 320px; 
 }
 
 .nav-link {
-    position: relative;
-    display: inline-block;
-  }
-  
-  #cart-count {
-    position: absolute;
-    top: -6px;
-    right: -4px;
-    background-color: red;
-    color: white;
-    padding: 2px 6px;
-    border-radius: 50%;
-    font-size: 12px;
-    font-weight: bold;
-    visibility: hidden;
-  }
-  
-  .nav-link.has-count #cart-count {
-    visibility: visible;
-  }
-  
+  position: relative;
+  display: inline-block;
+  color: #fff; /* Set link color to white */
+  transition: color 0.2s ease-in-out; 
+}
+
+.nav-link:hover {
+  color: #2874f0; 
+}
+
+#cart-count {
+  position: absolute;
+  top: -6px;
+  right: -4px;
+  background-color: #ff5722;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+  visibility: hidden;
+}
+
+.nav-link.has-count #cart-count {
+  visibility: visible;
+}
+
 .card:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2); /* Add box-shadow on hover */
 }
 
 .navbar {
-    padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2); /* Add box-shadow */
 }
 
 .navbar-brand {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
+  color: #fff; 
 }
 
 .navbar-toggler {
-    color: white;
-    border: none;
+  color: white;
+  border: none;
 }
+
 .bx {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28156, 163, 175, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'%3E%3C/path%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28156, 163, 175, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'%3E%3C/path%3E%3C/svg%3E");
 }
 
 .navbar-nav .nav-link {
-    color: white;
-    font-size: 23px;
+  color: white;
+  font-size: 18px; 
 }
 
 .card-title {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .card-text {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .btn-primary {
-    font-size: 1rem;
+  font-size: 1rem;
+  background-color: #2874f0; 
+  border-color: #2874f0; 
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #1c5ca9;
+  border-color: #1c5ca9; 
 }
 
 .btn-danger {
-    font-size: 1rem;
+  font-size: 1rem;
+}
+
+/* Add smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add a transition effect to links */
+a {
+  transition: color 0.2s ease-in-out;
+}
+
+/* Change the link color on hover */
+a:hover {
+  color: #2874f0;
+}
+
+/* Add a box-shadow to cards on hover */
+.card:hover {
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+}
+
+/* Add a hover effect to buttons */
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Add a box-shadow to buttons on hover */
+.btn:hover,
+.btn:focus {
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+}
+
+/* Add a box-shadow to the navbar */
+.navbar {
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
 }
