@@ -59,6 +59,67 @@ const products = [
   // Add more product objects here
 ];
 
+// Smartwatches data
+const smartwatches = [
+  {
+    id: 9,
+    name: "Apple Watch Series 7",
+    price: 399,
+    image: "https://m.media-amazon.com/images/I/71zkJruS5yL._SX679_.jpg",
+    quantity: 0
+  },
+  {
+    id: 10,
+    name: "Samsung Galaxy Watch 4",
+    price: 299,
+    image: "https://images.samsung.com/is/image/samsung/p6pim/in/2108/gallery/in-galaxy-watch4-398879-sm-r870nzsainu-481111404?$730_584_PNG$",
+    quantity: 0
+  },
+  {
+    id: 11,
+    name: "Fitbit Versa 3",
+    price: 229,
+    image: "https://m.media-amazon.com/images/I/612H8Z9G3CL._SX679_.jpg",
+    quantity: 0
+  },
+  {
+    id: 12,
+    name: "Garmin Forerunner 945",
+    price: 599,
+    image: "https://fitnessstore.co.in/wp-content/uploads/2020/11/Forerunner945-Black.png",
+    quantity: 0
+  },
+  {
+    id: 13,
+    name: "Huawei Watch GT 2",
+    price: 199,
+    image: "https://www.notebookcheck.net/fileadmin/Notebooks/Huawei/Watch_GT2/Huawei_Watch_GT_2_Teaser.jpg",
+    quantity: 0
+  },
+  {
+    id: 14,
+    name: "Amazfit GTR 2",
+    price: 179,
+    image: "https://in.amazfit.com/cdn/shop/products/amazfit-gtr-2-with-spo2-wi-fi-bt-call-gps-bezel-less-design-571381_2048x.jpg?v=1657286984",
+    quantity: 0
+  },
+  {
+    id: 15,
+    name: "Fossil Gen 5",
+    price: 249,
+    image: "https://fossil.scene7.com/is/image/FossilPartners/FTW4024_main?$sfcc_fos_large$",
+    quantity: 0
+  },
+  {
+    id: 16,
+    name: "TicWatch Pro 3",
+    price: 299,
+    image: "https://ticwatchindia.com/cdn/shop/products/Mobvoi-TicWatchPro3Ultra-3.png?v=1643915520&width=1445",
+    quantity: 0
+  }
+  // Add more smartwatch objects here
+];
+
 // Cart data
 let cartItems = [];
 
@@ -84,29 +145,38 @@ function renderProductCards() {
 
   productList.innerHTML = "";
 
-  products.forEach(product => {
-      const card = document.createElement("div");
-      card.classList.add("col-lg-3", "col-md-4", "col-sm-6", "mb-4");
-      card.innerHTML = `
-          <div class="card">
-              <img src="${product.image}" class="card-img-top" alt="${product.name}">
-              <div class="card-body">
-                  <h4 class="card-title">${product.name}</h4>
-                  <span class="card-text">$${product.price}</span>
-                  <div class="d-grid gap-2">
-                      <button class="btn btn-primary add-to-cart-btn" data-product-id="${product.id}">Add to cart</button>
-                  </div>
-              </div>
-          </div>
-      `;
+  const allProducts = [...products, ...smartwatches]; // Combine smartphones and smartwatches
 
+  allProducts.forEach(product => {
+    const card = document.createElement("div");
+    card.classList.add("col-lg-3", "col-md-4", "col-sm-6", "mb-4");
+    card.innerHTML = `
+      <div class="card">
+        <img src="${product.image}" class="card-img-top" alt="${product.name}">
+        <div class="card-body">
+          <h4 class="card-title">${product.name}</h4>
+          <span class="card-text">$${product.price}</span>
+          <div class="d-grid gap-2">
+            <button class="btn btn-primary add-to-cart-btn" data-product-id="${product.id}">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    `;
+
+    if (product instanceof Object && product.id >= 9 && product.id <= 16) {
+      const smartwatchList = document.getElementById("smartwatch-list");
+      if (smartwatchList) {
+        smartwatchList.appendChild(card);
+      }
+    } else {
       productList.appendChild(card);
+    }
   });
 
   // Add event listeners to the "Add to cart" buttons
   const addToCartButtons = document.getElementsByClassName("add-to-cart-btn");
   for (let i = 0; i < addToCartButtons.length; i++) {
-      addToCartButtons[i].addEventListener("click", addToCart);
+    addToCartButtons[i].addEventListener("click", addToCart);
   }
 }
 
@@ -119,7 +189,7 @@ function addToCart(event) {
   if (existingCartItem) {
       existingCartItem.quantity++;
   } else {
-      const product = products.find(item => item.id === productId);
+      const product = [...products, ...smartwatches].find(item => item.id === productId);
       cartItems.push({ ...product, quantity: 1 });
   }
 
@@ -185,31 +255,31 @@ function renderCartItems() {
   cartItemsContainer.innerHTML = "";
 
   cartItems.forEach(item => {
-      const cartItem = document.createElement("div");
-      cartItem.classList.add("mb-3");
-      cartItem.innerHTML = `
-          <div class="card">
-              <div class="row g-0">
-                  <div class="col-md-1">
-                      <img src="${item.image}" class="img-fluid rounded-start" alt="${item.name}">
-                  </div>
-                  <div class="col-md-8">
-                      <div class="card-body">
-                          <h5 class="card-title">${item.name}</h5>
-                          <p class="card-text">$${item.price}</p>
-                          <div class="d-flex align-items-center">
-                              <button class="btn btn-secondary decrease-quantity-btn" data-product-id="${item.id}">-</button>
-                              <span class="mx-2">${item.quantity}</span>
-                              <button class="btn btn-secondary increase-quantity-btn" data-product-id="${item.id}">+</button>
-                              <button class="btn btn-danger remove-from-cart-btn ms-auto" data-product-id="${item.id}">Remove</button>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+    const cartItem = document.createElement("div");
+    cartItem.classList.add("mb-3");
+    cartItem.innerHTML = `
+      <div class="card">
+        <div class="row g-0">
+          <div class="col-md-1">
+            <img src="${item.image}" class="img-fluid rounded-start" alt="${item.name}">
           </div>
-      `;
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">${item.name}</h5>
+              <p class="card-text">$${item.price}</p>
+              <div class="d-flex align-items-center">
+                <button class="btn btn-secondary decrease-quantity-btn" data-product-id="${item.id}">-</button>
+                <span class="mx-2">${item.quantity}</span>
+                <button class="btn btn-secondary increase-quantity-btn" data-product-id="${item.id}">+</button>
+                <button class="btn btn-danger remove-from-cart-btn ms-auto" data-product-id="${item.id}">Remove</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
 
-      cartItemsContainer.appendChild(cartItem);
+    cartItemsContainer.appendChild(cartItem);
   });
 
   // Add event listeners to the quantity and remove buttons
@@ -218,9 +288,9 @@ function renderCartItems() {
   const removeFromCartButtons = document.getElementsByClassName("remove-from-cart-btn");
 
   for (let i = 0; i < decreaseQuantityButtons.length; i++) {
-      decreaseQuantityButtons[i].addEventListener("click", decreaseQuantity);
-      increaseQuantityButtons[i].addEventListener("click", increaseQuantity);
-      removeFromCartButtons[i].addEventListener("click", removeFromCart);
+    decreaseQuantityButtons[i].addEventListener("click", decreaseQuantity);
+    increaseQuantityButtons[i].addEventListener("click", increaseQuantity);
+    removeFromCartButtons[i].addEventListener("click", removeFromCart);
   }
 
   updateTotalPrice();
@@ -236,9 +306,9 @@ function updateCartCount() {
 
   const navLink = document.querySelector(".nav-link");
   if (cartItems.length > 0) {
-      navLink.classList.add("has-count");
+    navLink.classList.add("has-count");
   } else {
-      navLink.classList.remove("has-count");
+    navLink.classList.remove("has-count");
   }
 
   storeCartItems();
@@ -257,9 +327,9 @@ function updateTotalPrice() {
 function checkout() {
   // Check if there are items in the cart
   if (cartItems && cartItems.length > 0) {
-      alert("Order placed successfully!");
+    alert("Order placed successfully!");
   } else {
-      alert("No items found in the cart. Please add items to your cart before proceeding to checkout.");
+    alert("No items found in the cart. Please add items to your cart before proceeding to checkout.");
   }
 }
 
@@ -271,7 +341,7 @@ function renderCartItemsOnLoad() {
   updateCartCount();
 
   if (cartItems.length === 0) {
-      localStorage.removeItem("cartItems");
+    localStorage.removeItem("cartItems");
   }
 }
 
