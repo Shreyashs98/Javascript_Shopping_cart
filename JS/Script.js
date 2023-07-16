@@ -196,6 +196,14 @@ function addToCart(event) {
   // Update the cart count and store the cart items in localStorage
   updateCartCount();
   storeCartItems();
+
+  // Show notification
+  showNotification("Item added to cart!");
+
+  // Reset notification after 2 seconds
+  setTimeout(() => {
+    resetNotification();
+  }, 2000);
 }
 
 // Function to remove a product from the cart
@@ -331,6 +339,24 @@ function checkout() {
   } else {
     alert("No items found in the cart. Please add items to your cart before proceeding to checkout.");
   }
+}
+
+// Function to show notification
+function showNotification(message) {
+  const notification = document.getElementById("notification");
+  if (!notification) return;
+
+  notification.textContent = message;
+  notification.style.display = "block";
+}
+
+// Function to reset notification
+function resetNotification() {
+  const notification = document.getElementById("notification");
+  if (!notification) return;
+
+  notification.textContent = "";
+  notification.style.display = "none";
 }
 
 // Function to render cart items on page load

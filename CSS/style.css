@@ -135,3 +135,46 @@ a:hover {
 .navbar {
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
 }
+
+.notification {
+  position: fixed;
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f0f8ff;
+  border: 2px solid #008000;
+  border-radius: 90px;
+  padding: 20px;
+  display: none;
+  z-index: 999;
+}
+
+.notification__icon {
+  color: #008000;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.notification__message {
+  font-size: 18px;
+  text-align: center;
+}
+
+.notification.show {
+  display: block;
+  animation: fadeOut 2s linear forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
