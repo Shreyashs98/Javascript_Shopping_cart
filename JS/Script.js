@@ -4,56 +4,56 @@ const products = [
       id: 1,
       name: "iPhone 14 Pro",
       price: 1200,
-      image: "../Images/iphone14proshs.jpg",
+      image: "https://m.media-amazon.com/images/I/61HHS0HrjpL._AC_UF1000,1000_QL80_.jpg",
       quantity: 0
   },
   {
     id: 2,
     name: "iPhone 13",
     price: 900,
-    image: "../Images/iphone13.jpg",
+    image: "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg",
     quantity: 0
   },
   {
       id: 3,
       name: "Realme Gt Neo 3t",
       price: 300,
-      image: "../Images/gtneo3t.jpg",
+      image: "https://cdn1.smartprix.com/rx-iLVyinaYZ-w1200-h1200/LVyinaYZ.jpg",
       quantity: 0
     },
     {
       id: 4,
       name: "OnePlus 11",
       price: 600,
-      image: "../Images/1plus11.jpg",
+      image: "https://m.media-amazon.com/images/I/61amb0CfMGL._AC_UF894,1000_QL80_.jpg",
       quantity: 0
     },
     {
       id: 5,
       name: "Samsung s22",
       price: 700,
-      image: "../Images/s22.jpg",
+      image: "https://m.media-amazon.com/images/I/71wGLBDEsvL._AC_UF894,1000_QL80_.jpg",
       quantity: 0
     },
     {
       id: 6,
       name: "Samsung Flip 3",
       price: 800,
-      image: "../Images/flip3.jpg",
+      image: "https://rukminim2.flixcart.com/image/832/832/ksnjp8w0/mobile/f/k/y/galaxy-z-flip3-5g-sm-f711bzkainu-samsung-original-imag662axn2xmght.jpeg?q=70",
       quantity: 0
     },
     {
         id: 7,
         name: "Vivo v27",
         price: 500,
-        image: "../Images/v27.jpeg",
+        image: "https://i.gadgets360cdn.com/products/large/vivo-v27-pro-db-709x800-1677656266.jpg",
         quantity: 0
       },
       {
         id: 8,
         name: "Oneplus nord",
         price: 200,
-        image: "../Images/nordce3.jpg",
+        image: "https://m.media-amazon.com/images/I/61RdG7c+VUL._AC_UF894,1000_QL80_.jpg",
         quantity: 0
       },
   // Add more product objects here
